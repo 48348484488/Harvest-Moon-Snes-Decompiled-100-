@@ -1,35 +1,30 @@
-# 🌾 Harvest Moon (SNES, 1997) - Decompilation Project
+# 🌾 Harvest Moon (SNES, 1997) - Full Decompilation Project
 
-> **⚠️ AVISO LEGAL (DISCLAIMER EDUCACIONAL):**
-> Este projeto foi criado **estritamente para fins educacionais, de pesquisa acadêmica, estudo de arquitetura de hardware e preservação histórica**. Este é um repositório sem fins lucrativos ou comerciais.
+> **⚠️ AVISO LEGAL E ISENÇÃO DE RESPONSABILIDADE (LEGAL DISCLAIMER)**
 > 
-> Todo o código aqui presente é resultado de engenharia reversa. **NENHUMA** ROM, imagem, faixa de áudio, texto ou ativo (asset) protegido por direitos autorais da Amccus, Natsume, Marvelous Inc. ou Nintendo está incluído neste repositório. 
+> Este é um projeto de engenharia reversa de código aberto criado **estritamente para fins educativos, pesquisa acadêmica, preservação histórica e testes de segurança** da arquitetura de software da era dos 16-bits. 
 >
-> Para compilar ou utilizar as ferramentas deste projeto, o usuário deve possuir e extrair os recursos de sua própria cópia legalmente adquirida do jogo. A pirataria não é apoiada de forma alguma por este projeto.
+> 🛑 **NENHUM RECURSO PROTEGIDO POR DIREITOS AUTORAIS ESTÁ INCLUÍDO NESTE REPOSITÓRIO.**
+> Este repositório **NÃO** contém, não distribui e não incentiva a pirataria de ROMs, imagens (sprites), faixas de áudio, fontes ou textos originais do jogo. Todo o código contido aqui é uma representação em alto nível/assembly gerada através de *clean-room design* ou tradução reversa para fins de estudo.
 
 ## 📖 Sobre o Projeto
 
-Este repositório contém o esforço de descompilação e engenharia reversa do clássico *Harvest Moon*, lançado originalmente para o Super Nintendo Entertainment System (SNES) em 1997. 
+Este repositório documenta a descompilação 100% da lógica do clássico *Harvest Moon* (SNES, 1997). O objetivo é fornecer um ambiente de estudo detalhado sobre como os sistemas de simulação agrícola, inteligência artificial de NPCs e gerenciamento de memória funcionavam em hardwares com limitações extremas.
 
-O objetivo principal deste repositório é documentar a lógica de programação da era dos 16-bits e entender como os primeiros jogos de simulação agrícola foram arquitetados lidando com as severas restrições de memória da época.
+O projeto é voltado para desenvolvedores, pesquisadores de segurança e estudantes de ciência da computação interessados na engenharia de software de jogos retro.
 
-## 🎯 Objetivos de Estudo
+## ⚖️ Uso Aceitável (Fair Use)
 
-* **Estudo da Arquitetura do SNES:** Compreender a interação com o processador Ricoh 5A22, gerenciamento de PPU (Picture Processing Unit) e o chip de áudio SPC700.
-* **Engenharia Reversa e Assembly:** Praticar a leitura, documentação e tradução de código Assembly 65816.
-* **Documentação de Engine:** Mapear estruturas de dados complexas, como o calendário interno do jogo, o sistema de crescimento de safras e as rotinas de inteligência artificial (IA) dos NPCs.
+Este repositório opera sob a doutrina de **Fair Use** (Uso Aceitável), especificamente voltado para a **interoperabilidade, pesquisa e estudo educacional**. Não há qualquer intenção comercial ou de lucro, e este projeto não substitui a obra original no mercado.
 
-## 🛠️ Como Funciona (Build)
+A propriedade intelectual, o título "Harvest Moon" (atualmente "Story of Seasons"), bem como todos os personagens e conceitos pertencem exclusivamente à Marvelous Inc., Natsume e respectivos detentores de direitos.
 
-*(Nota: Adicione aqui as instruções de como rodar o seu projeto, lembrando sempre de focar que a pessoa precisa da própria ROM)*
+## ⚙️ Como Compilar (Build Instructions)
 
-1. Obtenha a sua própria ROM legalizada de *Harvest Moon (US)*.
-2. Coloque o arquivo com o nome exato de `baserom.sfc` na pasta raiz.
-3. Execute o script `make extract` para separar os *assets*.
-4. Execute `make` para compilar o código fonte de volta em uma ROM funcional.
+Para gerar uma ROM funcional a partir deste código fonte, **é estritamente necessário possuir uma cópia original e legal do jogo**. A compilação falhará se você não fornecer os recursos originais.
 
-## ⚖️ Direitos Autorais
-
-A propriedade intelectual, os personagens, a trilha sonora e a marca "Harvest Moon" (e "Story of Seasons") pertencem aos seus respectivos criadores e detentores de direitos. Este repositório não reivindica a posse de nenhuma dessas propriedades. 
-
-Se você é fã da série, **apoie os desenvolvedores originais comprando os lançamentos e remakes oficiais mais recentes!**
+1. Faça o dump legal do seu cartucho original de *Harvest Moon (SNES)*.
+2. Renomeie o arquivo para `baserom.sfc` e coloque-o na pasta raiz do repositório.
+3. Execute o extrator de *assets* (isso irá retirar as músicas e gráficos da sua ROM e colocá-los nas pastas corretas do projeto):
+   ```bash
+   make extract
