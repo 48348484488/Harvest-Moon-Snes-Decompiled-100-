@@ -8,12 +8,14 @@ dos 16-bits (SNES, 1997).
 
 - 🛑 **Nenhuma ROM comercial.** O projeto nunca incluiu e nunca incluirá arquivos `.sfc`,
   `.smc`, `.fig`, `.swc` ou qualquer dump binário do cartucho original.
-- 🛑 **Nenhum gráfico extraído da ROM.** Sprites, atlases de personagens e tilemaps gerados
-  pelas ferramentas de extração (`tools/BitplaneToPng.py`, `tools/TilemapDecomp.py`, etc.)
-  foram deliberadamente removidos da versão pública deste repositório, pois são arte original
-  do jogo — mesmo obtida via engenharia reversa, ela continua sendo um recurso protegido. As
-  ferramentas para você mesmo gerar essas imagens **a partir da sua própria cópia legal da
-  ROM** continuam disponíveis em `tools/`.
+- 🛑 **Nenhum gráfico extraído da ROM.** Durante o processo de engenharia reversa, as
+  ferramentas de extração (`tools/BitplaneToPng.py`, `tools/TilemapDecomp.py`, etc.) *foram*
+  usadas para decodificar sprites e tilemaps da ROM em PNG, como passo intermediário de análise
+  — isso é dito aqui com todas as letras porque essas imagens chegaram a existir localmente
+  durante o desenvolvimento. Elas foram deliberadamente removidas antes da publicação deste
+  repositório, pois são a arte original do jogo, apenas decodificada para um formato legível —
+  não deixam de ser um recurso protegido por isso. As ferramentas continuam em `tools/` caso
+  você queira gerar essas imagens a partir da sua própria cópia legal da ROM.
 - 🛑 **Nenhum áudio/música original.**
 
 ## O que este repositório contém
@@ -30,11 +32,14 @@ uma ROM USA limpa (MD5 `c9bf36a816b6d54aed79d43a6c45111a`) — ver histórico em
 [`decomp_process_log/`](./decomp_process_log). Para compilar e testar você mesmo, precisa
 fornecer sua própria cópia legalmente adquirida da ROM (ver [`BUILD_GUIDE.md`](./BUILD_GUIDE.md)).
 
-## Uso Aceitável (Fair Use)
+## Uso Aceitável
 
-Este repositório opera sob a doutrina de **Fair Use**, voltado para **interoperabilidade,
-pesquisa e estudo educacional**. Não há intenção comercial ou de lucro, e este projeto não
-substitui a obra original no mercado.
+O objetivo declarado deste projeto é interoperabilidade, pesquisa e estudo educacional, sem
+intenção comercial ou de lucro. Isso **não é uma garantia legal** de que o projeto está
+protegido por "fair use" — fair use é uma defesa avaliada caso a caso por um tribunal, não algo
+que um projeto possa simplesmente declarar sobre si mesmo. Quem mantém e quem usa este
+repositório deve entender que engenharia reversa de jogos comerciais existe numa área
+juridicamente cinzenta, e agir de acordo com o próprio julgamento de risco.
 
 A propriedade intelectual, o título "Harvest Moon" (atualmente "Story of Seasons"), os
 personagens e conceitos pertencem exclusivamente à Marvelous Inc., Natsume e respectivos
