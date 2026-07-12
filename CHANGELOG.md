@@ -36,6 +36,7 @@ Resumo de alto nível da evolução do projeto. Para o log completo, pass a pass
 ## Nota sobre esta reorganização
 
 Este repositório foi reorganizado a partir do pacote de trabalho original para ficar navegável
-publicamente: consolidação de pastas duplicadas, separação do histórico bruto de passes em
-`decomp_process_log/`, e remoção de imagens extraídas da ROM (ver `DISCLAIMER.md`). Nenhum
-código-fonte foi alterado nesse processo.
+publicamente: consolidação de pastas duplicadas e separação do histórico bruto de passes em
+`decomp_process_log/`. Os gráficos extraídos da ROM (`sprites/`, `tilemaps/`,
+`reports/decomp_pass08/sprites/`) foram mantidos — ver `DISCLAIMER.md` para o que isso implica
+em termos de direitos autorais. Nenhum código-fonte foi alterado nesse processo.

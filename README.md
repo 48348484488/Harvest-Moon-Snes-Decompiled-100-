@@ -15,7 +15,9 @@ agrícola, event scripts, NPCs, etc.) para fins educacionais e de preservação 
 | [`src/`](./src) | Código-fonte em assembly 65816, organizado por banco de ROM (`code_banks/`, `data_banks/`, `constants/`, `maps/`) — o núcleo reconstruído do jogo |
 | [`tools/`](./tools) | ~60 scripts Python usados para extrair, analisar e descompilar dados da ROM (descompressão de gráficos, decodificador de texto, catálogos de itens, etc.) + o assembler `asar` |
 | [`docs/`](./docs) | Documentação técnica de cada sistema do jogo (agricultura, NPCs, save, menus, texto, etc.), pseudocódigo e material de onboarding |
-| [`reports/`](./reports) | Catálogos de dados gerados pelas ferramentas (CSV/JSON/MD/HTML) — itens, mapas, sprites (metadados), diálogos, etc. |
+| [`sprites/`](./sprites) | Atlases de sprite dos personagens extraídos da ROM, um por banco de gráficos (10 arquivos) |
+| [`tilemaps/`](./tilemaps) | Tilemaps das telas/mapas do jogo extraídos da ROM (66 arquivos) |
+| [`reports/`](./reports) | Catálogos de dados gerados pelas ferramentas (CSV/JSON/MD/HTML) — itens, mapas, diálogos, e também os atlases de componentes de sprite em `reports/decomp_pass08/sprites/` |
 | [`patches/`](./patches) | Diffs aplicados durante o processo de renomeação/organização de labels |
 | [`examples/`](./examples) | Exemplos pontuais de edição de texto/patches |
 | [`decomps/`](./decomps) | Arquivos de labels/símbolos para debuggers (Mesen), formato `.diz`/`.xml` |
@@ -31,13 +33,14 @@ agrícola, event scripts, NPCs, etc.) para fins educacionais e de preservação 
 - Documentação técnica de ~39 sistemas do jogo
 - Catálogos de dados em texto (CSV/JSON) — nomes, endereços, estruturas, referências cruzadas
 - Histórico completo do processo de decompilação (passes incrementais)
+- **Gráficos extraídos da ROM**: sprites de personagens (`sprites/`), tilemaps de mapas
+  (`tilemaps/`) e atlases de componentes de sprite (`reports/decomp_pass08/sprites/`) — arte
+  original do jogo, decodificada do formato interno da ROM para PNG. Ver `DISCLAIMER.md` para
+  o que isso implica em termos de direitos autorais.
 
-## ❌ O que NÃO está incluído (de propósito)
+## ❌ O que NÃO está incluído
 
 - **A ROM do jogo** — nunca esteve no repositório
-- **Gráficos extraídos da ROM** (sprites, tilemaps, atlases de imagem) — foram removidos da
-  versão organizada porque são arte original do jogo, mesmo extraída via engenharia reversa.
-  As ferramentas para gerá-los a partir da sua própria ROM continuam em `tools/`
 - **Áudio/música original**
 - Duas pastas de snapshot antigas/duplicadas do zip original (`source_decompilada/` e cópias
   soltas de `docs/`, `reports/`, `tools/`, `logs/` na raiz) — eram versões redundantes e
